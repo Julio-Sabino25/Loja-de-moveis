@@ -36,6 +36,8 @@ let modalDesc = document.getElementById("modal-desc");
 let tabela = document.getElementById("modal-tabela");
 let closeBtn = document.querySelector(".modal .close");
 
+let btnWhatsapp = document.getElementById("btn-whatsapp");
+
 document.querySelectorAll(".btn-ver").forEach(btn => {
     btn.addEventListener("click", () => {
         let nome = btn.getAttribute("data-nome");
@@ -46,8 +48,10 @@ document.querySelectorAll(".btn-ver").forEach(btn => {
         modalNome.textContent = nome;
         modalImg.src = img;
         modalDesc.textContent = desc;
-
-        // Limpa a tabela antes de adicionar novas informações
+      
+ let linkWhatsApp = `https://wa.me/5521996046875?text=Olá! Tenho interesse neste produto: ${encodeURIComponent(nome)}\n ${encodeURIComponent(desc)}`;
+      btnWhatsapp.href = linkWhatsApp; 
+      
         tabela.innerHTML = "";
 
         if (tecnicos) {
@@ -88,9 +92,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const paginacao = document.createElement("div");
 
   paginacao.classList.add("paginacao");
-  containerProdutos.after(paginacao); // insere logo após os produtos
+  containerProdutos.after(paginacao); 
 
-  // Adiciona data-index a cada produto
+
   listaProdutos.forEach((produto, i) => {
     produto.setAttribute("data-index", i);
   });

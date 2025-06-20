@@ -798,3 +798,21 @@ section{
     grid-template-columns: 1fr;
   }
 }
+
+.btn-whatsapp {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 15px;
+  background-color: #25D366;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+.btn-whatsapp:hover {
+  background-color: #1ebe5d;
+}
+.btn-whatsapp i {
+  margin-right: 5px;
+}

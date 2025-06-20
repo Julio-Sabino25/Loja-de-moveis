@@ -233,7 +233,7 @@ section{
     min-height: 50vh;
     display: flex;
     align-items: center;
-    background: url(/img/Quarto1.jpg) no-repeat;
+    background: url(img/Quarto1.jpg) no-repeat;
     background-size: cover;
     background-position: center
 }

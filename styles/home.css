@@ -233,7 +233,7 @@ section{
     min-height: 100vh;
     display: flex;
     align-items: center;
-    background: url(img/Banner-home-sala.jpg) no-repeat;
+    background: url(../img/Banner-home-sala.jpg) no-repeat;
     background-size: cover;
     background-position: center
 }

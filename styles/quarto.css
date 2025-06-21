@@ -114,8 +114,7 @@ section{
 }
 
 .minimenu{
-    margin-left: 41%;
-    margin-right: 41%;
+    text-align: center  ;
     margin-bottom: 50px;
     margin-top: 0;
 }

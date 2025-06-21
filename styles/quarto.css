@@ -113,28 +113,32 @@ section{
     color: #12121a;
 }
 
-.minimenu{
-    text-align: center  ;
-    margin-bottom: 50px;
-    margin-top: 0;
+.minimenu {
+    display: flex;
+    justify-content: center;  
+    flex-wrap: wrap; /* Permite que os itens quebrem para nova linha em telas pequenas */
+    gap: 1rem; /* Espaçamento uniforme entre os itens (substitui margin individual) */
+    margin: 0 auto 50px; /* Centraliza o nav e mantém margin-bottom */
+    padding: 0 1rem; /* Evita que os itens encostem nas bordas em mobile */
+    max-width: 100%; /* Garante que não ultrapasse a largura da tela */
 }
-#selecao{
-   color: rgba(184,225,175,0.91);
-}
-.minimenu a{
-    margin: 0 1rem;
+
+.minimenu a {
     font-size: 1.6rem;
     color: #fff;
+    text-decoration: none; /* Remove sublinhado padrão */
+    white-space: nowrap; /* Evita quebra de texto em itens */
+    padding: 0.5rem 1rem; /* Espaçamento interno para melhor toque em mobile */
 }
-.minimenu a:hover{
+
+#selecao {
     color: rgba(184,225,175,0.91);
-    border-bottom: .1rem solid var(--main-color);
-    padding-bottom: .5rem;
 }
-.minimenu a:hover{
+
+.minimenu a:hover {
     color: rgba(184,225,175,0.91);
-    border-bottom: .1rem solid var(--main-color);
-    padding-bottom: .5rem;
+    border-bottom: 0.1rem solid var(--main-color);
+    padding-bottom: 0.5rem;
 }
 
 

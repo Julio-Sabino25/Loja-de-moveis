@@ -113,6 +113,32 @@ section{
     color: #12121a;
 }
 
+.minimenu{
+    margin-left: 41%;
+    margin-right: 41%;
+    margin-bottom: 50px;
+    margin-top: 0;
+}
+#selecao{
+   color: rgba(184,225,175,0.91);
+}
+.minimenu a{
+    margin: 0 1rem;
+    font-size: 1.6rem;
+    color: #fff;
+}
+.minimenu a:hover{
+    color: rgba(184,225,175,0.91);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+.minimenu a:hover{
+    color: rgba(184,225,175,0.91);
+    border-bottom: .1rem solid var(--main-color);
+    padding-bottom: .5rem;
+}
+
+
 .header .navbar a:hover{
     color: #FFF;
     border-bottom: .1rem solid var(--main-color);

@@ -131,14 +131,16 @@ section{
     padding: 0.5rem 1rem; /* Espaçamento interno para melhor toque em mobile */
 }
 
-#selecao {
-    color: rgba(184,225,175,0.91);
-}
-
 .minimenu a:hover {
     color: rgba(184,225,175,0.91);
     border-bottom: 0.1rem solid var(--main-color);
     padding-bottom: 0.5rem;
+}
+
+#selecao {
+    text-decoration:solid;
+    color: rgba(184,225,175,1);
+   
 }
 
 

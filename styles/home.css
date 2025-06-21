@@ -616,4 +616,24 @@ section{
         font-size: 50%;
     }
 }
-  
+
+/* Padronização das imagens dos produtos */
+.produtos .box-container .box .image {
+    height: 450px; /* Altura fixa para todas as imagens */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Esconde partes que ultrapassarem */
+}
+
+.produtos .box-container .box .image img {
+    width: 100%; /* Largura adaptável */
+    height: 100%; /* Altura igual ao container */
+    object-fit: contain; /* Mantém proporção sem cortar */
+    object-position: center; /* Centraliza a imagem */
+    transition: transform 0.3s ease; /* Suaviza o hover */
+}
+
+.produtos .box-container .box:hover .image img {
+    transform: scale(1.05); /* Efeito de zoom sutil */
+}

@@ -137,3 +137,66 @@ document.addEventListener("DOMContentLoaded", function () {
   // Mostra a primeira página ao carregar
   mostrarPagina(1);
 });
+
+let mensagemWhatsApp = "Olá! Visitei o seu site e fiquei com interesse em um dos seus produtos.";
+let numeroWhatsApp = "5521996046875";
+
+// Monta o link pronto
+let linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagemWhatsApp)}`;
+
+// Seleciona todos os ícones de carrinho
+let botoesCarrinho = document.querySelectorAll('.fa-shopping-cart');
+
+// Aplica o link em todos
+botoesCarrinho.forEach(botao => {
+  botao.href = linkWhatsApp;
+  botao.target = "_blank";
+});
+ 
+
+// Seleciona o ícone do olhinho e adiciona o mesmo comportamento
+document.querySelectorAll(".fa-eye").forEach(icone => {
+    icone.addEventListener("click", (e) => {
+        e.preventDefault(); // Evita o comportamento padrão do link
+
+        // Sobe na estrutura até encontrar o .box
+        let box = icone.closest(".box");
+        let btn = box.querySelector(".btn-ver");
+
+        // Usa os mesmos dados do botão .btn-ver
+        let nome = btn.getAttribute("data-nome");
+        let img = btn.getAttribute("data-img");
+        let desc = btn.getAttribute("data-desc");
+        let tecnicos = btn.getAttribute("data-tecnicos");
+
+        modalNome.textContent = nome;
+        modalImg.src = img;
+        modalDesc.textContent = desc;
+
+        let linkWhatsApp = `https://wa.me/5521996046875?text=Olá! Tenho interesse neste produto: ${encodeURIComponent(nome)}\n ${encodeURIComponent(desc)}`;
+        btnWhatsapp.href = linkWhatsApp;
+
+        tabela.innerHTML = "";
+
+        if (tecnicos) {
+            let dados = JSON.parse(tecnicos);
+            for (let chave in dados) {
+                let tr = document.createElement("tr");
+
+                let td1 = document.createElement("td");
+                td1.textContent = chave;
+
+                let td2 = document.createElement("td");
+                td2.textContent = dados[chave];
+
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tabela.appendChild(tr);
+            }
+        }
+
+        modal.style.display = "block";
+    });
+});
+// Sala
+

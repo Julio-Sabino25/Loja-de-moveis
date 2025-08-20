@@ -101,7 +101,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const totalPaginas = Math.ceil(listaProdutos.length / produtosPorPagina);
 
-  // Cria os botões dinamicamente
   for (let i = 1; i <= totalPaginas; i++) {
     const botao = document.createElement("button");
     botao.classList.add("btn-pagina");

@@ -72,12 +72,13 @@ section{
     color:#fff;
     background: var(--main-color);
     cursor: pointer;
+    text-decoration: none;  
 }
 
 .btn:hover{
     letter-spacing: .2rem;
+    color: #fff !important; 
 }
-
 /* cabeçalho */
 .header{
     background: rgba(184,225,175,0.91);

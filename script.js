@@ -145,13 +145,31 @@ let linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(me
 
 // Seleciona todos os ícones de carrinho
 let botoesCarrinho = document.querySelectorAll('.fa-shopping-cart');
-
 // Aplica o link em todos
 botoesCarrinho.forEach(botao => {
   botao.href = linkWhatsApp;
   botao.target = "_blank";
 });
  
+
+
+let botoessubmit = document.querySelectorAll('.enviar_mensagem');
+
+botoessubmit.forEach(botao => {
+    botao.addEventListener('click', function(e) {
+        // Opcional: valide os campos do formulário primeiro
+        
+        let mensagemWhatsApp = "Olá! Visitei o seu site e fiquei com interesse em um dos seus produtos.";
+        let numeroWhatsApp = "5521996046875";
+        let linkWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(mensagemWhatsApp)}`;
+        
+        // Abre WhatsApp mas não previne o envio do formulário
+        window.open(linkWhatsApp, '_blank');
+        
+        // Se quiser prevenir o envio do formulário, descomente:
+        // e.preventDefault();
+    });
+});
 
 // Seleciona o ícone do olhinho e adiciona o mesmo comportamento
 document.querySelectorAll(".fa-eye").forEach(icone => {
